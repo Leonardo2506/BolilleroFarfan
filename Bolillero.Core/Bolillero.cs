@@ -18,17 +18,9 @@ namespace Bolillero.Core
         {
             for(byte i=0; i < Cantidad; i++)
             {
-                
+                Adentro.Add(i);
             }
-        }
-        public byte IngresarBolilla()
-        {
-            
-        }
-        public byte SacarBolilla()
-        {
-
-        } 
+        }  
     }
 
     
