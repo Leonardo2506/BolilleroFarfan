@@ -1,4 +1,4 @@
-![.NET5](https://github.com/ET12DE1Computacion/simpleTemplateCSharp/workflows/.NET5/badge.svg?branch=dev)
+![.NET5](https://github.com/Leonardo2506/BolilleroFarfan/workflows/.NET5/badge.svg?branch=dev)
 [![Abrir en Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/Leonardo2506/BolilleroFarfan)
 <h1 align="center">E.T. Nº12 D.E. 1º "Libertador Gral. José de San Martín"</h1>
 <p align="center">
