@@ -10,8 +10,6 @@ namespace Bolillero.Core
 
         byte indiceAzar {get; set;} 
 
-        byte bolilla;  
-
         List<byte> Afuera { get; set;}
 
         List<byte> Adentro {get; set;}
@@ -37,16 +35,25 @@ namespace Bolillero.Core
                 Adentro.Add(i);
             }
         }
-        public byte Quitar()
+        public byte SacarBolilla()
         {
+
             byte indiceAzar = (byte)r.Next(0, Adentro.Count);
 
-            return indiceAzar;
+            byte bolilla = Adentro [indiceAzar];
+
+            Adentro.RemoveAt(indiceAzar);
+
+            Afuera.Add(bolilla);
+
+            return bolilla;
         }
 
-        public void Agregar()
+        public void RellenarBolillero()
         {
-            Afuera.Add(indiceAzar); 
+            Adentro.AddRange(Afuera);
+
+            Afuera.Clear();
         }
 
         
