@@ -6,10 +6,6 @@ namespace Bolillero.Core
 {
     public class Bolillero
     {
-        byte cantidad {get; set;}
-
-        byte indiceAzar {get; set;} 
-
         List<byte> Afuera { get; set;}
 
         List<byte> Adentro {get; set;}
@@ -55,7 +51,33 @@ namespace Bolillero.Core
 
             Afuera.Clear();
         }
-    }
 
-    
+        public bool Jugar (List<byte> jugada)
+        {
+            RellenarBolillero(); 
+            for(byte i=0; i < jugada.Count; i++)
+            {
+                if (SacarBolilla() != jugada[i] )
+                {
+                    return false;
+                }
+            }
+                return true; 
+        } 
+
+        public long jugarNVeces (List<byte> jugada, long cantidad )
+        {
+            long contador = 0; 
+
+            for(long i=0; i < cantidad ; i++ )
+            {
+                if (Jugar())
+                {
+                    contador++ ;
+                }
+            }
+
+            return contador;
+        }
+    }  
 }
