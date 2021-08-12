@@ -16,12 +16,12 @@ namespace Bolillero.Core
         {
             Afuera = new List<byte>{};
             Adentro = new List<byte>{};
-            r = new Random();
+            r = new Random(DateTime.Now.Millisecond);
         }
 
-        public Bolillero(byte cantidad)
+        public Bolillero(byte cantidad):this()
         {
-            this.Llenar(this.cantidad); 
+            this.Llenar(cantidad); 
         }
 
         private void Llenar (byte cantidad)
@@ -71,7 +71,7 @@ namespace Bolillero.Core
 
             for(long i=0; i < cantidad ; i++ )
             {
-                if (Jugar())
+                if (Jugar(jugada))
                 {
                     contador++ ;
                 }
