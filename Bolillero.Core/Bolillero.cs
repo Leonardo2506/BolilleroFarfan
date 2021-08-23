@@ -8,6 +8,10 @@ namespace Bolillero.Core
         List<byte> Afuera { get; set;}
 
         List<byte> Adentro {get; set;}
+
+        public int CantidadAfuera => Afuera.Count;
+
+        public int CantidadAdentro => Adentro.Count;  
         
         Random r;
 
@@ -78,5 +82,7 @@ namespace Bolillero.Core
 
             return contador;
         }
+
+
     }  
 }
