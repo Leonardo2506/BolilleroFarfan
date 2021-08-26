@@ -12,7 +12,18 @@ namespace Bolillero.Core
 
         public long simularConHilos(Bolillero bolillero, long jugarNVeces, List<byte> jugada, int CantidadHilos)
         {
+            var vector = new Task<long>[CantidadHilos]; 
+
+            for(long i=0; i < jugarNVeces; i++)
+            {
+                Bolillero.Clone();
+
+                CantidadHilos = CantidadHilos + 1; 
+                
+            }
+
             
+            return 0; 
         }
     }
 }
