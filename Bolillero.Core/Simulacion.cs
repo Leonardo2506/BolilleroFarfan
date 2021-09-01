@@ -23,7 +23,7 @@ namespace Bolillero.Core
             {
                 var clone = (Bolillero)bolillero.Clone();  
 
-                vector[i] = Task<long>.Run(() => clone.jugarNVeces(jugada, CantidadHilos)); 
+                vector[i] = Task<long>.Run(() => clone.jugarNVeces(jugada, simulacionPorHilos)); 
             }
 
             Task<long>.WaitAll(vector);
