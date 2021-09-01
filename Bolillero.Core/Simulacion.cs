@@ -19,9 +19,9 @@ namespace Bolillero.Core
 
             long simulacionPorHilos = jugarNVeces/CantidadHilos;
 
-            for(long i=0; i < CantidadHilos; i++)
+            for(int i=0; i < CantidadHilos; i++)
             {
-                Bolillero clone = (Bolillero)bolillero.Clone();  
+                var clone = (Bolillero)bolillero.Clone();  
 
                 vector[i] = Task<long>.Run(() => clone.jugarNVeces(jugada, CantidadHilos)); 
             }

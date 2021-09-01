@@ -74,7 +74,7 @@ namespace Bolillero.Core
                     return false;
                 }
             }
-                return true; 
+            return true; 
         } 
 
         public long jugarNVeces (List<byte> jugada, long cantidad )
